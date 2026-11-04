@@ -1,27 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=-, initial-scale=1.0">
-    <title>Finder</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapVault — Visual Image Search</title>
+  <!-- Linked stylesheet strictly named styles.css -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="Brandtitle">
-        <h1 class="brand">Finder</h1>
-        </div>
-        <p class="tagline"> Find the art of life</p>
-        <form class="input">
-            <label for="search">Search what u want</label>
-            <input type="search" id="search" placeholder="What's in ur Mind">
-            <button id="sumbite"> search</button>
-        </form>
-    </header>
-    <main>
-        <section id="reslut">
 
-        </section id='reslut'>
-    </main>
+  <!-- Sticky Branded Header -->
+  <header class="site-header">
+    <div class="brand">
+      <h1 class="logo-title">SnapVault</h1>
+      <p class="tagline">Unlock high-resolution imagery with a single keyword</p>
+    </div>
+
+    <!-- Search Control Form -->
+    <form id="search-form" class="search-box">
+      <label for="search-input" class="visually-hidden">Search images</label>
+      <input 
+        type="search" 
+        id="search-input" 
+        placeholder="Search photos, vectors, or topics..." 
+        required 
+      />
+      <button type="button" id="clear-btn" aria-label="Clear search">✕</button>
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+  </header>
+
+  <main class="main-content">
+    <!-- Quick-Pick Category Suggestion Chips -->
+    <section class="suggestions-container" aria-label="Suggested Categories">
+      <span class="suggestion-label">Popular:</span>
+      <div class="chips-wrapper">
+        <button type="button" class="chip">Nature</button>
+        <button type="button" class="chip">Architecture</button>
+        <button type="button" class="chip">Cyberpunk</button>
+        <button type="button" class="chip">Minimalism</button>
+      </div>
+    </section>
+
+    <!-- Result Count / Status Placeholder -->
+    <p id="status-message" class="status-text"></p>
+
+    <!-- Empty-State Message Element -->
+    <div id="empty-state" class="empty-state">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+        <polyline points="21 15 16 10 5 21"></polyline>
+      </svg>
+      <p>Search for a topic above to explore images.</p>
+    </div>
+
+    <!-- Empty Target Grid Container for Part 2 -->
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <!-- Script placed strictly before closing body tag -->
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
